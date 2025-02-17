@@ -6,4 +6,4 @@ use App\Http\Controllers\HomeController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::resource('/', [HomeController::class, 'index']);
+Route::resource('posts', HomeController::class );

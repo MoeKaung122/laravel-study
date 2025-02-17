@@ -15,25 +15,17 @@
                
             </div>
             <br>
-            <div class="container"> <a href="/posts/create" type="button" class="btn btn-success">Create New</a></div>
+            
             <br>
             <div class="card-body">
                 
-                 @foreach ($date as $post)
+                 
                      <div class="">
-                    <h5>{{$post->name}}</h5>
-                    <p>{{$post->description}}</p>
-                    <div class="btn-group">
-                          <a href="/posts/{{$post->id}}" class="btn btn-primary" >View</a>
-                          <a href="/posts/{{$post->id}}/edit" class="btn btn-warning" >Edit</a>
-                          <form action="/posts/{{$post->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger" type="submit">Delete</button>
-                             </form>
-                    </div>
+                    <h5>{{$date->name}}</h5>
+                    <p>{{$date->description}}</p>
+                    <a href="/posts" class="btn btn-primary">back</a>
                  </div><hr>
-                @endforeach
+                
             </div>
         </div>
     </div>
